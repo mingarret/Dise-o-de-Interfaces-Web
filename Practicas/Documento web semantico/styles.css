@@ -1,0 +1,99 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, nav, main, aside, footer {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  /* Estilo del encabezado */
+  header {
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header h2 {
+    color: #666;
+    font-size: 1.2em;
+  }
+  
+  /* Estilo de la navegación */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilo del contenido principal */
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  section {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  h3 {
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+  
+  /* Estilo de los artículos */
+  article {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  
+  article h4 {
+    margin: 0;
+  }
+  
+  article p {
+    color: #333;
+  }
+  
+  article a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilo del aside */
+  aside {
+    background-color: #ffef96;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Estilo del pie de página */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
