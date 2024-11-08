@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Cabecera fija con z-index alto */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      margin-left: 15px;
+    }
+
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Barra lateral de navegación */
+    aside {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 150px;
+      padding: 15px;
+      background-color: #f4f4f4;
+      height: calc(100% - 60px);
+      border-right: 1px solid #ddd;
+    }
+
+    aside nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside nav ul li {
+      margin-bottom: 10px;
+    }
+
+    aside nav ul li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    aside nav ul li a:hover {
+      background-color: #ddd;
+    }
+
+    /* Notificación emergente con alto z-index */
+    .popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: yellow;
+      padding: 10px;
+      border: 1px solid #333;
+      z-index: 1001;
+    }
+
+    /* Sección de biografía */
+    .bio {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      margin-top: 80px;
+      margin-left: 180px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .bio img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 15px;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio div {
+      max-width: 600px;
+    }
+
+    .bio .oculto {
+      visibility: hidden;
+    }
+
+    /* Galería de imágenes con overflow horizontal */
+    .galeria {
+      padding: 20px;
+      margin-left: 180px;
+      position: relative;
+    }
+
+    .galeria h2 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .galeria .imagenes {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .galeria img {
+      width: 150px;
+      height: 100px;
+      margin-right: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      background-color: #ccc; /* Por si no se carga la imagen */
+    }
+
+    .marca-agua {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      opacity: 0.1;
+      font-size: 5em;
+      color: #333;
+      z-index: 0;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Ajustes de botones y elementos de interacción */
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <!-- Cabecera fija -->
+  <header>
+    <h1>Gargamel Life</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Configuración</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Barra lateral de navegación -->
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#">Publicaciones</a></li>
+        <li><a href="#">Mensajes</a></li>
+        <li><a href="#">Amigos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Notificación de nuevas publicaciones -->
+  <div class="popup">Nuevas publicaciones disponibles</div>
+
+  <!-- Sección principal del perfil -->
+  <main>
+    <!-- Sección de biografía con imagen de perfil -->
+    <section class="bio">
+      <img src="https://pics.craiyon.com/2023-10-03/df2ba8fc2ef543099d83182a1b803785.webp" alt="Foto de perfil">
+      <div>
+        <p>Gárgamel fue el antagonista y villano principal de la clásica serie de cómic Los pitufos creada por Peyo...</p>
+        <p class="oculto">Su fecha de nacimiento fue el 6 de noviembre, de profesión agrónomo y posteriormente se volvería
+           el amargado cazador de pitufos. Su primera aparición tiene lugar en El ladrón de pitufos (1959).</p>
+        <button onclick="mostrarMas()">Ver más</button>
+      </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section class="galeria">
+      <h2>Publicaciones recientes</h2>
+      <div class="imagenes">
+        <img src="https://i.pinimg.com/originals/27/2d/bd/272dbdf7a10d9d3d9f5ce5398058c113.png" alt="Publicación 1">
+        <img src="https://vignette.wikia.nocookie.net/pitufos/images/c/ce/Pitufo_Hackus.png/revision/latest?cb=20150222164415&path-prefix=es" alt="Publicación 2">
+        <img src="https://i.pinimg.com/originals/38/6a/5f/386a5fd34d5c783fbdb8ebc0bd9b674d.jpg" alt="Publicación 3">
+        <img src="https://th.bing.com/th/id/R.2d4d6c35ec483b5cdf48512f30c98741?rik=sD5tEPF4QMHd7Q&riu=http%3a%2f%2f2.bp.blogspot.com%2f-GIC3B7-t6Rs%2fU3zMABMik4I%2fAAAAAAAAAss%2f98wmDvHLR6Y%2fs1600%2f12.png&ehk=z0pzj27ICs%2bbZIBS6tCyoE6tTh5xcn2k8Xn0zmmjz%2fQ%3d&risl=&pid=ImgRaw&r=0" alt="Publicación 4">
+      </div>
+      <div class="marca-agua">Galería</div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Redes sociales: <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    <p>Contacto: gargamel@pitufilandia.com</p>
+  </footer>
+
+  <script>
+    function mostrarMas() {
+      document.querySelector('.oculto').style.visibility = 'visible';
+    }
+  </script>
+</body>
+</html>

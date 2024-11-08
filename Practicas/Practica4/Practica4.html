@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Personal</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header and Navigation */
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        /* Biography Section */
+        #bio h2::before {
+            content: "★ ";
+            color: #ffcc00;
+        }
+
+        #bio p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Gallery Section */
+        .imagenes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .imagenes figure {
+            text-align: center;
+        }
+
+        .imagenes img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .imagenes img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+        }
+
+        /* Top Button */
+        #topButton {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #topButton:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                background-color: #444;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="#bio">Biografía</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="bio">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy un desarrollador web con una sólida experiencia en el diseño y desarrollo de sitios web modernos y funcionales. 
+                A lo largo de mi carrera, he trabajado en proyectos que abarcan desde la creación de páginas web personales hasta 
+                plataformas corporativas, aplicando las mejores prácticas en usabilidad, accesibilidad y optimización.
+            </p>
+            <p>
+                Mi enfoque está en la construcción de interfaces de usuario intuitivas, con especial atención a la experiencia del 
+                usuario (UX) y el diseño responsivo, asegurando que los sitios web se vean y funcionen correctamente en cualquier dispositivo.
+                Tengo un fuerte dominio de tecnologías como HTML, CSS, y JavaScript, además de experiencia con bibliotecas y frameworks 
+                como React, Bootstrap y SASS.
+            </p>
+            <p>
+                <strong>Aptitudes:</strong>
+                <ul>
+                    <li><strong>Desarrollo Frontend:</strong> Experto en HTML5, CSS3, JavaScript y frameworks como React.</li>
+                    <li><strong>Diseño Responsive:</strong> Habilidad para crear sitios web que se adapten a diferentes tamaños de pantalla.</li>
+                    <li><strong>Optimización de rendimiento:</strong> Experiencia en optimización de sitios para mejorar velocidad de carga y SEO.</li>
+                    <li><strong>Trabajo en equipo:</strong> Acostumbrado a colaborar en equipos multidisciplinarios.</li>
+                </ul>
+            </p>
+        </section>
+        
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="imagenes">
+                <figure>
+                    <img src=https://th.bing.com/th/id/OIP.FFSLtbWMUo2j2SgNfJ6DOQHaHa?rs=1&pid=ImgDetMain alt="HTML5">
+                    <figcaption>HTML5: El lenguaje estándar para crear sitios web estructurados y accesibles.</figcaption>
+                </figure>
+                <figure>
+                    <img src=https://th.bing.com/th/id/R.f462ea39ee7a688a9c46faa2d230907a?rik=gdVJOgOfym%2fv6Q&riu=http%3a%2f%2fwww.goldenapplewebdesign.com%2fwp-content%2fuploads%2f2011%2f07%2fcss3.jpg&ehk=XJePj%2bDwQf5elnrVTK24c%2fQvyJoDOV7RiybsjKJ7rso%3d&risl=&pid=ImgRaw&r=0 alt="CSS3">
+                    <figcaption>CSS3: El lenguaje para darle estilo y diseño visual a las páginas web.</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Contacto: <a href="mailto:email@dominio.com">ximomingarro@hotmail.com</a></p>
+    </footer>
+
+    <button id="topButton">Volver arriba</button>
+</body>
+</html>

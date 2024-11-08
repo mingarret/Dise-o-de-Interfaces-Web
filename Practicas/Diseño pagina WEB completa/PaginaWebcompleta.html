@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Página Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ccc;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #biografia {
+            display: flex;
+            align-items: center;
+        }
+
+        #biografia img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        #experiencia .trabajo {
+            border: 1px solid #333;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        #experiencia .trabajo h3 {
+            color: #333;
+        }
+
+        #habilidades {
+            margin-top: 20px;
+        }
+
+        #habilidades ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #habilidades .habilidad {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+        }
+
+        #habilidades .habilidad:hover {
+            background-color: #ddd;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #biografia {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KEVIN SPENCER</h1>
+        <nav>
+            <ul>
+                <li><a href="#biografia">Biografía</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="biografia">
+            <img src=https://th.bing.com/th/id/OIP.gsPqNsaA_Uh_Roox6ZPStQHaK5?rs=1&pid=ImgDetMain alt="Foto del profesional">
+            <p>Kevin Spencer es un chico de dieciséis años, gamberro, fumador empedernido, alcohólico, adicto a los jarabes para la tos, inhalador de pintura y sociópata. 
+                Apenas va al colegio. Pese a esta descripción inicial, no es más que un pobre chico que intenta encajar en una sociedad que se burla de él. El personaje de Kevin no dice una sola palabra en la serie, 
+                excepto cuando se imagina a sí mismo en sueños. Voz en español: desconocido.</p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Profesional</h2>
+            <div class="trabajo">
+                <h3>Hablar con pato amarillo</h3>
+                <span>25/12/2024</span>
+            </div>
+            <div class="trabajo">
+                <h3>Quemar cosas</h3>
+                <span>Todos los dias</span>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li class="habilidad">Crak</li>
+                <li class="habilidad">Meta</li>
+                <li class="habilidad">Pegamento</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: Kevin@sociopata.com | Teléfono: 123-456-7890</p>
+    </footer>
+
+</body>
+</html>
