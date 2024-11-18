@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 7: Sidebar</title>
+  <style>
+    .container {
+      display: grid; /* Habilita el grid layout */
+      grid-template-columns: 25% 75%; /* Sidebar ocupa el 25% y el contenido el 75% */
+      gap: 10px; /* Espacio entre columnas */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+      height: 300px; /* Altura total del contenedor */
+    }
+    .sidebar {
+      background-color: lightblue; /* Color de fondo */
+      padding: 20px; /* Espaciado interno */
+      text-align: center; /* Centra el texto */
+    }
+    .content {
+      background-color: lightgreen; /* Color de fondo */
+      padding: 20px; /* Espaciado interno */
+      text-align: center; /* Centra el texto */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Contenido principal</div>
+  </div>
+</body>
+</html>

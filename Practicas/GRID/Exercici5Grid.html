@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5: Cabecera, contenido y pie de página</title>
+  <style>
+    .container {
+      display: grid; /* Habilita el grid layout */
+      grid-template-rows: 50px 1fr 50px; /* Tres filas con alturas específicas */
+      height: 300px; /* Altura total del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .header, .footer {
+      background-color: lightgray; /* Color de fondo */
+      text-align: center; /* Centra el texto */
+      padding: 10px; /* Espaciado interno */
+    }
+    .main {
+      background-color: lightyellow; /* Color de fondo */
+      text-align: center; /* Centra el texto */
+      padding: 20px; /* Espaciado interno */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Cabecera</div>
+    <div class="main">Contenido principal</div>
+    <div class="footer">Pie de página</div>
+  </div>
+</body>
+</html>

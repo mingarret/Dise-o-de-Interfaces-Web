@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2: 3 columnas iguales</title>
+  <style>
+    .container {
+      display: grid; /* Habilita el grid layout */
+      grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+      gap: 10px; /* Espacio entre columnas */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      background-color: lightcoral; /* Color de fondo */
+      padding: 20px; /* Espaciado interno */
+      text-align: center; /* Centra el texto */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>

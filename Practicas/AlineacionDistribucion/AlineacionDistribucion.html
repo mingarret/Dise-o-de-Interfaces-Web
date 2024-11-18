@@ -1,0 +1,543 @@
+
+
+<!-- Ejercicio 1: Alineación básica con justify-content y align-items -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1: Justify-content y Align-items</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      justify-content: space-around; /* Distribuye los elementos con espacio igual alrededor */
+      align-items: center; /* Alinea los elementos verticalmente al centro */
+      height: 200px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue; /* Color de fondo */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 2: Dirección y alineación con flex-direction y align-items-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2: Flex-direction y Align-items</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-direction: column; /* Organiza los elementos en una columna vertical */
+      align-items: flex-end; /* Alinea los elementos al final del eje horizontal (derecha) */
+      height: 200px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 60px;
+      height: 40px;
+      background-color: lightcoral; /* Color de fondo */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 3: Distribución en múltiples líneas con flex-wrap -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3: Flex-wrap</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-wrap: wrap; /* Permite que los elementos se distribuyan en múltiples líneas */
+      width: 150px; /* Ancho del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 60px;
+      height: 60px;
+      background-color: lightgreen; /* Color de fondo */
+      margin: 5px; /* Espacio entre los elementos */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 4: Usar flex-grow para expandir elementos -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4: Flex-grow</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      height: 50px; /* Altura fija */
+      background-color: lightyellow; /* Color de fondo */
+    }
+    .box:nth-child(1) { flex-grow: 1; } /* El primer elemento crece 1 parte */
+    .box:nth-child(2) { flex-grow: 2; } /* El segundo elemento crece 2 partes */
+    .box:nth-child(3) { flex-grow: 1; } /* El tercer elemento crece 1 parte */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 5: Cuadrícula flexible con align-content -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 5: Align-content</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-wrap: wrap; /* Permite que los elementos se distribuyan en varias líneas */
+      align-content: space-between; /* Distribuye las filas con espacio igual entre ellas */
+      height: 300px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 80px;
+      height: 80px;
+      background-color: lightpink; /* Color de fondo */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 6: Cambiar el orden de elementos con order -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 6: Order</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue; /* Color de fondo */
+    }
+    .box:nth-child(1) { order: 3; } /* El primer elemento se muestra en la posición 3 */
+    .box:nth-child(2) { order: 1; } /* El segundo elemento se muestra en la posición 1 */
+    .box:nth-child(3) { order: 2; } /* El tercer elemento se muestra en la posición 2 */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 7: Distribuir espacio con space-between -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 7: Space-between</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      justify-content: space-between; /* Espacia los elementos uniformemente sin espacio en los extremos */
+      align-items: center; /* Alinea los elementos verticalmente al centro */
+      height: 150px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 40px;
+      height: 40px;
+      background-color: lightcoral; /* Color de fondo */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>
+
+
+<!-- Ejercicio 8: Alineación de elementos con align-self -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8: Align-self</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      align-items: center; /* Alinea todos los elementos al centro verticalmente */
+      height: 200px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue; /* Color de fondo */
+    }
+    .box:nth-child(2) { align-self: flex-start; } /* Este elemento se alinea al inicio del eje vertical */
+    .box:nth-child(3) { align-self: flex-end; } /* Este elemento se alinea al final del eje vertical */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+<!-- Ejercicio 9: Uso de flex-basis y flex-grow -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9: Flex-basis y Flex-grow</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      flex-basis: 100px; /* Tamaño inicial de 100px para todos los elementos */
+      flex-grow: 1; /* Todos los elementos crecen igualmente */
+      height: 50px; /* Altura fija */
+      background-color: lightgreen; /* Color de fondo */
+    }
+    .box:nth-child(2) { flex-grow: 2; } /* Este elemento crece el doble que los demás */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+<!-- Ejercicio 10: Flexibilidad con flex-shrink -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 10: Flex-shrink</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      width: 300px; /* Ancho del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      flex-basis: 150px; /* Tamaño inicial de 150px */
+      flex-shrink: 1; /* Todos los elementos pueden encogerse */
+      height: 50px; /* Altura fija */
+      background-color: lightcoral; /* Color de fondo */
+    }
+    .box:nth-child(1) { flex-shrink: 0; } /* Este elemento no se encoge */
+    .box:nth-child(3) { flex-shrink: 2; } /* Este elemento se encoge el doble que los demás */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 11: flex-direction y justify-content -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11: Flex-direction y Justify-content</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-direction: column; /* Organiza los elementos en una columna */
+      justify-content: space-around; /* Espacio igual entre los elementos en la columna */
+      height: 300px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightyellow; /* Color de fondo */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+</body>
+</html>
+
+
+<!-- Ejercicio 12: Alineación en múltiples líneas con align-content -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 12: Align-content</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-wrap: wrap; /* Permite que los elementos se distribuyan en múltiples líneas */
+      align-content: space-around; /* Espacio igual entre las filas */
+      height: 300px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 60px;
+      height: 60px;
+      background-color: lightpink; /* Color de fondo */
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 13: Combinación de order y align-self -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 13: Order y Align-self</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      height: 200px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: lightgreen; /* Color de fondo */
+    }
+    .box:nth-child(1) {
+      order: 3; /* Este elemento se muestra en la posición 3 */
+      align-self: flex-end; /* Alineación al final del eje vertical */
+    }
+    .box:nth-child(2) {
+      order: 1; /* Este elemento se muestra en la posición 1 */
+      align-self: center; /* Alineación centrada */
+    }
+    .box:nth-child(3) {
+      order: 2; /* Este elemento se muestra en la posición 2 */
+      align-self: flex-start; /* Alineación al inicio del eje vertical */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 14: Distribución con flex-flow -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 14: Flex-flow</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-flow: row wrap; /* Combina flex-direction: row y flex-wrap: wrap */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+      height: 200px; /* Altura del contenedor */
+    }
+    .box {
+      width: 60px;
+      height: 60px;
+      background-color: lightgreen; /* Color de fondo */
+      margin: 5px; /* Espacio entre los elementos */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- Ejercicio 15: Alineación compleja con align-content y justify-content -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 15: Justify-content y Align-content</title>
+  <style>
+    .container {
+      display: flex; /* Habilita el modelo de caja flexible */
+      flex-wrap: wrap; /* Permite que los elementos se distribuyan en múltiples líneas */
+      justify-content: center; /* Alinea los elementos al centro horizontalmente */
+      align-content: space-evenly; /* Distribuye las filas con espacio igual entre ellas */
+      height: 300px; /* Altura del contenedor */
+      border: 1px solid black; /* Borde para visualizar el contenedor */
+    }
+    .box {
+      width: 80px;
+      height: 80px;
+      background-color: lightyellow; /* Color de fondo */
+      margin: 5px; /* Espacio entre los elementos */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
