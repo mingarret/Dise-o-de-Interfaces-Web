@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoBlog – Consejos y Noticias sobre Sostenibilidad</title>
+  <style>
+    /* Estilos generales */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 10px 15px;
+    }
+
+    header img {
+      max-height: 50px;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    header p {
+      margin-top: 10px;
+    }
+
+    .hamburger-menu {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Contenedor principal */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 10px;
+      flex: 1;
+      padding: 20px;
+    }
+
+    aside {
+      background-color: #ecf0f1;
+      padding: 20px;
+      grid-column: span 3;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside li {
+      margin-bottom: 10px;
+    }
+
+    aside a {
+      text-decoration: none;
+      color: #2c3e50;
+    }
+
+    main {
+      grid-column: span 9;
+      padding: 20px;
+      background-color: #fdfdfd;
+    }
+
+    .noticia img, .consejo img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .consejos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .consejo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    footer {
+      grid-column: span 12;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    /* Off Canvas */
+    .off-canvas {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #2c3e50;
+      color: white;
+      overflow-y: auto;
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+      padding: 15px;
+    }
+
+    .off-canvas.open {
+      transform: translateX(250px);
+    }
+
+    .off-canvas .close-button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        display: none;
+      }
+
+      .hamburger-menu {
+        display: inline-block;
+      }
+
+      main {
+        grid-column: span 12;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .container {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      aside {
+        grid-column: span 4;
+      }
+
+      main {
+        grid-column: span 8;
+      }
+    }
+
+    @media (min-width: 1025px) {
+      .container {
+        grid-template-columns: repeat(12, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabecera -->
+  <header>
+    <div style="display: flex; align-items: center;">
+      <button id="menu-toggle" class="hamburger-menu">&#9776;</button>
+      <img src="https://img.freepik.com/vector-premium/logo-ecologico_54199-1941.jpg?w=826" alt="Logo de EcoBlog">
+      <h1>EcoBlog</h1>
+    </div>
+    <p>Consejos y Noticias sobre Sostenibilidad</p>
+  </header>
+
+  <!-- Menú lateral deslizante -->
+  <aside id="sidebar" class="off-canvas">
+    <button id="close-menu" class="close-button">&times;</button>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Noticias</a></li>
+      <li><a href="#">Consejos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div>
+      <p>Redes Sociales:</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <!-- Contenido principal -->
+    <main>
+      <section class="noticia">
+        <h2>Noticias Destacadas</h2>
+        <img src="https://img.freepik.com/foto-gratis/vista-angulo-arbol-cubierto-hojas-verdes-luz-sol-dia_181624-21838.jpg?w=1380" alt="Imagen destacada">
+        <p>Este es un breve párrafo introductorio de la noticia destacada sobre sostenibilidad.</p>
+      </section>
+
+      <section class="consejos">
+        <h2>Consejos Rápidos</h2>
+        <div class="consejo">
+          <img src="https://images.unsplash.com/photo-1719166061844-1c951024fcba?q=80&w=1932" alt="Consejo 1">
+          <p>Consejo breve sobre sostenibilidad 1.</p>
+        </div>
+        <div class="consejo">
+          <img src="https://img.freepik.com/foto-gratis/hermoso-bosque-arboles-cerca-lago-montanas-nevadas-fondo-bled-eslovenia_181624-6683.jpg" alt="Consejo 2">
+          <p>Consejo breve sobre sostenibilidad 2.</p>
+        </div>
+        <div class="consejo">
+          <img src="https://img.freepik.com/foto-gratis/paisaje-casa-cerca-bosques-cuerpo-agua-tranquila_198169-158.jpg" alt="Consejo 3">
+          <p>Consejo breve sobre sostenibilidad 3.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2023 EcoBlog. Todos los derechos reservados.</p>
+    <p><a href="#">Política de privacidad</a></p>
+  </footer>
+
+  <script>
+    const toggleMenu = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleMenu.addEventListener('click', () => {
+      sidebar.classList.add('open');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
