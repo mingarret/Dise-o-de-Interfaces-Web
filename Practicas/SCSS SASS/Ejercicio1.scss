@@ -1,0 +1,63 @@
+// Estilos para un botón con diferentes estados
+.button {
+    background-color: #3498db; // Color de fondo inicial del botón
+    color: white; // Color del texto
+    padding: 10px 20px; // Espaciado interno para el botón
+    border: none; // Sin borde
+    border-radius: 5px; // Bordes redondeados
+    cursor: pointer; // Cambia el cursor al pasar por encima
+  
+    // Estado hover: se aplica cuando el mouse está sobre el botón
+    &:hover {
+      background-color: #2980b9; // Cambia el color de fondo a un tono más oscuro
+    }
+  
+    // Estado active: se aplica mientras el botón está siendo presionado
+    &:active {
+      background-color: #1c6692; // Cambia el color de fondo a un tono aún más oscuro
+    }
+  
+    // Clase is-disabled: se usa para indicar que el botón está deshabilitado
+    &.is-disabled {
+      background-color: #bdc3c7; // Cambia el color de fondo a gris
+      cursor: not-allowed; // Cambia el cursor a uno que indica que no se puede interactuar
+    }
+  
+    // Clase is-loading: se aplica cuando el botón está en estado de carga
+    &.is-loading {
+      position: relative; // Necesario para posicionar elementos adicionales
+  
+      // Pseudo-elemento para mostrar una animación de puntos suspensivos
+      &::after {
+        content: '...'; // Texto que se mostrará
+        display: inline-block; // Hace que los puntos sean visibles en línea
+        animation: loading 1s infinite; // Aplica la animación
+      }
+    }
+  }
+  
+  // Definición de la animación loading
+  @keyframes loading {
+    0% { content: '.'; } // Un solo punto al inicio de la animación
+    50% { content: '..'; } // Dos puntos en el medio
+    100% { content: '...'; } // Tres puntos al final
+  }
+  
+  // Combinadores para estilizar elementos secundarios dentro de un contenedor
+  .container {
+    padding: 20px; // Espaciado interno del contenedor
+    background-color: #f9f9f9; // Fondo claro para el contenedor
+  
+    // Estilo para los elementos secundarios con la clase child
+    .child {
+      padding: 10px; // Espaciado interno para cada elemento
+      background-color: #eaeaea; // Fondo gris claro para cada child
+      margin-bottom: 10px; // Espaciado inferior entre los elementos
+  
+      // Elimina el margen inferior del último elemento
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
