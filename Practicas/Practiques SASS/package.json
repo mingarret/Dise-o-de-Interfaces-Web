@@ -1,0 +1,16 @@
+{
+  "name": "practiques-sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass src/styles.scss dist/styles.css --watch"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.81.0"
+  }
+}

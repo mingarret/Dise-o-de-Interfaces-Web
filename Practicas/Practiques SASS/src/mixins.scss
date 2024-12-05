@@ -1,0 +1,41 @@
+// Mixin: Ajusta el tamaño de fuente según el tamaño de la pantalla
+@mixin responsive-font($small, $medium, $large) {
+  font-size: $large;
+
+  @media (max-width: 1200px) {
+    font-size: $medium;
+  }
+
+  @media (max-width: 768px) {
+    font-size: $small;
+  }
+}
+
+// Placeholder: Estilos reutilizables para cajas
+%box-style {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+// Mapa de colores y generación de clases dinámicas
+$theme-colors: (
+  primary: #3498db,
+  secondary: #2ecc71,
+  danger: #e74c3c
+);
+
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
+    background-color: $color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+}

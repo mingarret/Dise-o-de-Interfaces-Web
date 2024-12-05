@@ -1,0 +1,22 @@
+// Importar mixins
+@use 'mixins.scss';
+
+// Ejercicio 12.2: Aplicar el mixin responsive-font
+h1 {
+  @include mixins.responsive-font(16px, 20px, 24px);
+}
+
+// Ejercicio 12.3: Usar el mixin box-style
+.info-box {
+  @extend %box-style;
+  background-color: #f9f9f9;
+}
+
+.warning-box {
+  @extend %box-style;
+  background-color: #ffe5e5;
+  color: #d9534f;
+}
+
+// Ejercicio 12.4: Clases generadas automáticamente con $theme-colors
+// (ya se generan automáticamente desde mixins.scss)
